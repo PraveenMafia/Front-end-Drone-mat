@@ -13,7 +13,7 @@ const CategoryCard = ({ name, statuses, statusIcons, statusColors }) => (
           <li key={status} className="flex items-center">
             <Icon className={`mr-2 ${color}`} />
             <span className="text-gray-300">{status}</span>
-            <span className="ml-auto font-bold text-gray-900 dark:text-white">
+            <span className="ml-auto font-bold text-white">
               {qty}
             </span>
           </li>
