@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div>
-      <div className="min-h-screen bg-gray-100 dark:bg-black p-8  ">
+      <div className="min-h-screen  bg-black p-8  ">
         <div className='flex justify-start  p-2 '>
           <div>
           <h1 className='text-white text-xl font-medium'>Dashboard</h1>
