@@ -46,11 +46,16 @@ function App() {
   const grouped = groupByCategoryAndStatus(mockupData);
 
   return (
-    <div >
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 p-8">
-       
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div>
+      <div className="min-h-screen bg-gray-100 dark:bg-black p-8  ">
+        <div className='flex justify-start  p-2 '>
+          <div>
+          <h1 className='text-white text-xl font-medium'>Dashboard</h1>
+          <h2 className='text-gray-600 gap-2 text-sm font-normal text-muted-foregroun'>Drone Summary and Equipments</h2>
+          </div>
+        </div>
+      
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4  ">
           {Object.entries(grouped).map(([name, statuses]) => (
             <CategoryCard
               key={name}
