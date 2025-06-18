@@ -33,7 +33,7 @@ const statusColors = {
 const groupByCategoryAndStatus = (data) => {
   const res = {};
   data.forEach(item => {
-    const cat = item.Category?.Name || 'Unknown';
+    const cat = item.Name || 'Unknown';
     const st = item.Status;
     res[cat] = res[cat] || {};
     res[cat][st] = (res[cat][st] || 0) + item.Quantity;
@@ -44,6 +44,7 @@ const groupByCategoryAndStatus = (data) => {
 function App() {
   
   const grouped = groupByCategoryAndStatus(mockupData);
+  
 
   return (
     <div>
@@ -57,6 +58,7 @@ function App() {
       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4  ">
           {Object.entries(grouped).map(([name, statuses]) => (
+            
             <CategoryCard
               key={name}
               name={name}
